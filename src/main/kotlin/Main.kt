@@ -13,7 +13,6 @@ import io.ktor.server.routing.*
 import io.ktor.server.plugins.contentnegotiation.*
 import io.ktor.serialization.kotlinx.json.*
 import io.ktor.http.HttpStatusCode
-import io.ktor.server.plugins.swagger.swaggerUI
 
 fun main() {
     embeddedServer(Netty, port = 8080) {
