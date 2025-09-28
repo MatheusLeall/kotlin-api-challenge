@@ -4,6 +4,7 @@ import com.tinnova.desafio.question01.calculateElectionResult
 import com.tinnova.desafio.question02.executeBubbleSort
 import com.tinnova.desafio.question03.factorialCalculus
 import com.tinnova.desafio.question04.sumMultiplesOf3Or5
+import com.tinnova.desafio.question05.vehicleRoutes
 import io.ktor.server.application.*
 import io.ktor.server.engine.*
 import io.ktor.server.netty.*
@@ -12,6 +13,7 @@ import io.ktor.server.routing.*
 import io.ktor.server.plugins.contentnegotiation.*
 import io.ktor.serialization.kotlinx.json.*
 import io.ktor.http.HttpStatusCode
+import io.ktor.server.plugins.swagger.swaggerUI
 
 fun main() {
     embeddedServer(Netty, port = 8080) {
@@ -70,6 +72,8 @@ fun main() {
                 val response = executeBubbleSort(valuesArray)
                 call.respond(response)
             }
+            vehicleRoutes()
+            //swaggerUI(path = "swagger")
         }
     }.start(wait = true)
 }
