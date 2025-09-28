@@ -12,17 +12,17 @@ repositories {
 }
 
 dependencies {
-    // Ktor core + Netty engine
-    implementation("io.ktor:ktor-server-core:2.3.7")
-    implementation("io.ktor:ktor-server-netty:2.3.7")
+    // Ktor core + Netty engine — atualizadas para 3.2.3
+    implementation("io.ktor:ktor-server-core:3.2.3")
+    implementation("io.ktor:ktor-server-netty:3.2.3")
 
-    // Content negotiation (JSON)
-    implementation("io.ktor:ktor-server-content-negotiation:2.3.7")
-    implementation("io.ktor:ktor-serialization-kotlinx-json:2.3.7")
+    // Content negotiation (JSON) — versão correspondente
+    implementation("io.ktor:ktor-server-content-negotiation:3.2.3")
+    implementation("io.ktor:ktor-serialization-kotlinx-json:3.2.3")
 
-    // Testes
-    testImplementation("io.ktor:ktor-server-tests:2.3.7")
-    testImplementation("org.jetbrains.kotlin:kotlin-test-junit:1.9.22")
+    // Módulo de testes atualizado
+    testImplementation("io.ktor:ktor-server-test-host:3.2.3")
+    testImplementation("org.jetbrains.kotlin:kotlin-test-junit:2.2.10")
 
     testImplementation(kotlin("test"))
 }
